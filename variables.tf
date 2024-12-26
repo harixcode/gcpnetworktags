@@ -19,11 +19,24 @@ variable "BindTagInternetSubnet" {
   type    = bool
   default = false
 }
+variable "BindManualTagValues" {
+  type    = bool
+  default = false
+}
 variable "CreateTags" {
   type    = bool
   default = false
 }
+variable "MANUAL_SUBNETIDS" {
+  type = list(string)
+}
+variable "MANUAL_TAGVALUES" {
+  type = list(string)
+}
 variable "PROJECT_NUM" {
+  type = string
+}
+variable "MANUAL_PROJECTNUM" {
   type = string
 }
 variable "INTRANET_SUBNET_IDS" {
